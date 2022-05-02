@@ -9,7 +9,6 @@
 import Foundation
 
 class Game {
-    var gameStat = GameStats()
     
     var score = 0
 
@@ -60,7 +59,7 @@ class Game {
             currentIndex += 1
         } else {
             finishGame()
-            gameStat.addPartie()
+            
         }
     }
 

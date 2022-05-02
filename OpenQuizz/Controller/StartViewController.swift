@@ -12,7 +12,8 @@ class StartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        UserDefaults().set(0, forKey: "nbParties")
+        UserDefaults().set(0, forKey: "bestScore")
         // Do any additional setup after loading the view.
     }
     

@@ -10,14 +10,19 @@ import UIKit
 
 class GameStatsViewController: UIViewController {
     
-    var gameStat = GameStats()
-
+    let partie = UserDefaults().string(forKey: "nbParties")
+    let bestScore = UserDefaults().string(forKey: "bestScore")
+    
     @IBOutlet weak var LabelTextField: UILabel!
+    
+    @IBOutlet weak var LabelTextField2: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        LabelTextField.text = "Nombre de partie: " + partie!
         
-        LabelTextField.text = String(gameStat.nbParties)
+        LabelTextField2.text = "Meilleur score: " + bestScore! + "/10"
     }
     
 

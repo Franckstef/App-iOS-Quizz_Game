@@ -27,12 +27,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        gameStat.nbParties = UserDefaults().integer(forKey: "nbParties")
+        
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(questionsLoaded), name: Game.questionsLoadedNotifName, object: nil)
         
         startNewGame()
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(dragQuestionView(_:)))
         questionView.addGestureRecognizer(panGestureRecognizer)
+        
+        
     }
     
     @objc func questionsLoaded() {
@@ -110,6 +115,15 @@ class ViewController: UIViewController {
             questionView.title = game.currentQuestion.title
         case .over:
             questionView.title = "Game Over"
+            gameStat.addPartie()
+            gameStat.bestScore = game.score
+            
+            
+            UserDefaults().set(game.score, forKey: "bestScore")
+            UserDefaults().set(gameStat.bestScore, forKey: "bestScore")
+            
+            UserDefaults().integer(forKey: "nbParties")
+            UserDefaults().set(gameStat.nbParties, forKey: "nbParties")
             
         }
         
@@ -133,6 +147,5 @@ class ViewController: UIViewController {
         game.refresh()
     }
     
- 
 }
 

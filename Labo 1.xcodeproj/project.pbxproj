@@ -124,8 +124,8 @@
 				6A7733FF248E8B0300BDB06F /* Question.swift */,
 				6A773449248EAAD800BDB06F /* Game.swift */,
 				6A77344B248EABAD00BDB06F /* QuestionManager.swift */,
-				8189857C281EE69B00678EBA /* GameConfig.swift */,
 				81898580281EEC4700678EBA /* GameStats.swift */,
+				8189857C281EE69B00678EBA /* GameConfig.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
