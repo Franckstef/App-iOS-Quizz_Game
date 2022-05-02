@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6A239FA72490FDED00BC9D36 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A239FA62490FDED00BC9D36 /* QuestionView.swift */; };
-		6A4D3091268D00B80082E101 /* Labo_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4D3090268D00B80082E101 /* Labo_1Tests.swift */; };
 		6A773394248ACE7700BDB06F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A773393248ACE7700BDB06F /* AppDelegate.swift */; };
 		6A773396248ACE7700BDB06F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A773395248ACE7700BDB06F /* SceneDelegate.swift */; };
 		6A773398248ACE7700BDB06F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A773397248ACE7700BDB06F /* ViewController.swift */; };
@@ -25,6 +24,11 @@
 		81898579281ECE8600678EBA /* GameStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81898578281ECE8600678EBA /* GameStatsViewController.swift */; };
 		8189857D281EE69B00678EBA /* GameConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189857C281EE69B00678EBA /* GameConfig.swift */; };
 		81898581281EEC4700678EBA /* GameStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81898580281EEC4700678EBA /* GameStats.swift */; };
+		AAAD9F61282073B2009A196E /* GameTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAD9F60282073B2009A196E /* GameTestCase.swift */; };
+		AAAD9F6328207648009A196E /* QuestionTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAD9F6228207648009A196E /* QuestionTestCase.swift */; };
+		AAAD9F652820766E009A196E /* GameConfigTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAD9F642820766E009A196E /* GameConfigTestCase.swift */; };
+		AAAD9F672820768D009A196E /* GameStatsTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAD9F662820768D009A196E /* GameStatsTestCase.swift */; };
+		AAAD9F69282076D8009A196E /* QuestionManagerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAD9F68282076D8009A196E /* QuestionManagerTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +44,6 @@
 /* Begin PBXFileReference section */
 		6A239FA62490FDED00BC9D36 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		6A4D308E268D00B80082E101 /* Labo 1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Labo 1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A4D3090268D00B80082E101 /* Labo_1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labo_1Tests.swift; sourceTree = "<group>"; };
 		6A4D3092268D00B80082E101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A773390248ACE7700BDB06F /* Labo 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Labo 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A773393248ACE7700BDB06F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +63,11 @@
 		81898578281ECE8600678EBA /* GameStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatsViewController.swift; sourceTree = "<group>"; };
 		8189857C281EE69B00678EBA /* GameConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConfig.swift; sourceTree = "<group>"; };
 		81898580281EEC4700678EBA /* GameStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStats.swift; sourceTree = "<group>"; };
+		AAAD9F60282073B2009A196E /* GameTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTestCase.swift; sourceTree = "<group>"; };
+		AAAD9F6228207648009A196E /* QuestionTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTestCase.swift; sourceTree = "<group>"; };
+		AAAD9F642820766E009A196E /* GameConfigTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConfigTestCase.swift; sourceTree = "<group>"; };
+		AAAD9F662820768D009A196E /* GameStatsTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatsTestCase.swift; sourceTree = "<group>"; };
+		AAAD9F68282076D8009A196E /* QuestionManagerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManagerTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +91,12 @@
 		6A4D308F268D00B80082E101 /* Labo 1Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6A4D3090268D00B80082E101 /* Labo_1Tests.swift */,
 				6A4D3092268D00B80082E101 /* Info.plist */,
+				AAAD9F60282073B2009A196E /* GameTestCase.swift */,
+				AAAD9F6228207648009A196E /* QuestionTestCase.swift */,
+				AAAD9F642820766E009A196E /* GameConfigTestCase.swift */,
+				AAAD9F662820768D009A196E /* GameStatsTestCase.swift */,
+				AAAD9F68282076D8009A196E /* QuestionManagerTestCase.swift */,
 			);
 			path = "Labo 1Tests";
 			sourceTree = "<group>";
@@ -214,6 +226,7 @@
 				TargetAttributes = {
 					6A4D308D268D00B80082E101 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1320;
 						TestTargetID = 6A77338F248ACE7700BDB06F;
 					};
 					6A77338F248ACE7700BDB06F = {
@@ -267,7 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A4D3091268D00B80082E101 /* Labo_1Tests.swift in Sources */,
+				AAAD9F61282073B2009A196E /* GameTestCase.swift in Sources */,
+				AAAD9F652820766E009A196E /* GameConfigTestCase.swift in Sources */,
+				AAAD9F6328207648009A196E /* QuestionTestCase.swift in Sources */,
+				AAAD9F69282076D8009A196E /* QuestionManagerTestCase.swift in Sources */,
+				AAAD9F672820768D009A196E /* GameStatsTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +341,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5V2CQ8ZSEH;
@@ -336,6 +354,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ca.qc.collegeahuntsic.Labo-1Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Labo 1.app/Labo 1";
@@ -346,6 +365,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5V2CQ8ZSEH;
