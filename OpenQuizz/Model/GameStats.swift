@@ -8,19 +8,14 @@
 
 import UIKit
 
-class GameStats: UIViewController {
+class GameStats {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
     var nbParties = 0
     
-    func addPartie () -> Int {
+    func addPartie () {
         nbParties += 1
-        return nbParties
+        
     }
     
 }
