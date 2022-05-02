@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         gameStat.nbParties = UserDefaults().integer(forKey: "nbParties")
+        gameStat.bestScore = UserDefaults().integer(forKey: "bestScore")
         
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(questionsLoaded), name: Game.questionsLoadedNotifName, object: nil)
@@ -115,15 +116,13 @@ class ViewController: UIViewController {
             questionView.title = game.currentQuestion.title
         case .over:
             questionView.title = "Game Over"
+            
             gameStat.addPartie()
-            gameStat.bestScore = game.score
-            
-            
-            UserDefaults().set(game.score, forKey: "bestScore")
-            UserDefaults().set(gameStat.bestScore, forKey: "bestScore")
-            
-            UserDefaults().integer(forKey: "nbParties")
             UserDefaults().set(gameStat.nbParties, forKey: "nbParties")
+            
+            if gameStat.bestScore < game.score {
+                UserDefaults().set(game.score, forKey: "bestScore")
+            }
             
         }
         

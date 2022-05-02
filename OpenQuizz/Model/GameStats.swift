@@ -14,16 +14,11 @@ class GameStats {
     
     var nbParties = 0
     var bestScore = 0
-    var newScore = 0
+    //var tableau: [Int] = []
     
     func addPartie () {
         nbParties = nbParties + 1
     }
     
-    func addBestScore () {
-        if newScore > bestScore {
-            bestScore = newScore
-        }
-    }
     
 }

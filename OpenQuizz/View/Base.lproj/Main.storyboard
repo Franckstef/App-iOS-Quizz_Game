@@ -89,6 +89,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="hRU-wf-Oe6" kind="relationship" relationship="viewControllers" id="2VR-qJ-Sbs"/>
@@ -103,7 +106,9 @@
         <scene sceneID="mMZ-Fl-ZQu">
             <objects>
                 <navigationController id="hRU-wf-Oe6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Welcome" id="bm7-ar-ana"/>
+                    <tabBarItem key="tabBarItem" title="Welcome" id="bm7-ar-ana">
+                        <color key="badgeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9J3-L8-wKu">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

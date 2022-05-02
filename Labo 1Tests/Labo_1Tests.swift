@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Lab // MARK: - FIXME
+@testable import Labo_1 // MARK: - FIXME
 
 class Labo_1Tests: XCTestCase {
 
