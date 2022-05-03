@@ -17,6 +17,8 @@ class GameTestCase: XCTestCase {
         
     }
 
+    
+
     func testGivenTwoTrueQuestions_WhenAnsweringTrue_ThenScoreIsOneAndGameOnGoing() {
         
     }
