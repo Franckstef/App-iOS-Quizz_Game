@@ -10,6 +10,13 @@ import XCTest
 @testable import Labo_1
 
 class GameTestCase: XCTestCase {
+
+
+    override func setUp() {
+        super.setUp()
+        
+    }
+
     func testGivenTwoTrueQuestions_WhenAnsweringTrue_ThenScoreIsOneAndGameOnGoing() {
         
     }
