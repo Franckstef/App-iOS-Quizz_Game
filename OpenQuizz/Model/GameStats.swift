@@ -6,16 +6,19 @@
 //  Copyright © 2022 Ahuntsic. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class GameStats {
-
+    
+    var game = Game()
     
     var nbParties = 0
+    var bestScore = 0
+    //var tableau: [Int] = []
     
     func addPartie () {
-        nbParties += 1
-        
+        nbParties = nbParties + 1
     }
+    
     
 }

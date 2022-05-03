@@ -9,10 +9,13 @@
 import UIKit
 
 class StartViewController: UIViewController {
+    
+    var gameStat = GameStats()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        UserDefaults().set(gameStat.nbParties, forKey: "nbParties")
+        UserDefaults().set(gameStat.bestScore, forKey: "bestScore")
         // Do any additional setup after loading the view.
     }
     
