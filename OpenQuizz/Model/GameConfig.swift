@@ -8,21 +8,13 @@
 
 import Foundation
 
-struct Name {
-
-    var name: String?
+class Name {
     
-    enum Status {
-        case accepted
-        case rejected(String)
-    }
+    static let shared = Name()
 
-    var status: Status {
-        guard let name = name, name.isEmpty == false else {
-            return .rejected("Vous n'avez pas indiqué votre nom !")
-        }
-        
-        return .accepted
-    }
+    var name: String = "User Default"
+    
+    private init(){}
+
 }
 

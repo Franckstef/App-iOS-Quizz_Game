@@ -21,14 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONFIG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgL-rB-a5s">
-                                <rect key="frame" x="25" y="69" width="364" height="719"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game config" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgL-rB-a5s">
+                                <rect key="frame" x="25" y="69" width="364" height="35"/>
+                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0l3-Rn-iF1">
-                                <rect key="frame" x="107" y="523" width="200" height="34"/>
+                                <rect key="frame" x="107" y="129" width="200" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -37,31 +37,45 @@
                                     <outlet property="delegate" destination="GpF-qE-2YM" id="gfb-I8-uVa"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxt-Ud-BWJ">
-                                <rect key="frame" x="184" y="637" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxt-Ud-BWJ">
+                                <rect key="frame" x="107" y="188" width="200" height="42"/>
+                                <color key="backgroundColor" red="0.39851522940478568" green="0.80927312861763467" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
                                 <state key="normal" title="Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="validate:" destination="GpF-qE-2YM" eventType="touchUpInside" id="t64-DN-jiI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pI2-yn-esk">
+                                <rect key="frame" x="107" y="262" width="200" height="29.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="25"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rw6-Rk-34v"/>
-                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.2842465784923931" green="0.56953309173711142" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="Rw6-Rk-34v" firstAttribute="trailing" secondItem="xxt-Ud-BWJ" secondAttribute="trailing" constant="107" id="5RD-d1-Dqj"/>
+                            <constraint firstItem="pI2-yn-esk" firstAttribute="top" secondItem="xxt-Ud-BWJ" secondAttribute="bottom" constant="32" id="8Dv-YF-TjU"/>
+                            <constraint firstItem="pI2-yn-esk" firstAttribute="leading" secondItem="Rw6-Rk-34v" secondAttribute="leading" constant="107" id="C1o-Br-eIe"/>
                             <constraint firstItem="bgL-rB-a5s" firstAttribute="leading" secondItem="Rw6-Rk-34v" secondAttribute="leading" constant="25" id="F0Q-Cr-Mg6"/>
                             <constraint firstItem="0l3-Rn-iF1" firstAttribute="centerX" secondItem="VfC-Wh-4Px" secondAttribute="centerX" id="HaA-hl-S8n"/>
                             <constraint firstItem="0l3-Rn-iF1" firstAttribute="leading" secondItem="Rw6-Rk-34v" secondAttribute="leading" constant="107" id="K4c-uI-cK5"/>
+                            <constraint firstItem="xxt-Ud-BWJ" firstAttribute="top" secondItem="0l3-Rn-iF1" secondAttribute="bottom" constant="25" id="VvB-74-Wvt"/>
+                            <constraint firstItem="Rw6-Rk-34v" firstAttribute="trailing" secondItem="0l3-Rn-iF1" secondAttribute="trailing" constant="107" id="Ym2-UH-ZcZ"/>
                             <constraint firstItem="Rw6-Rk-34v" firstAttribute="trailing" secondItem="0l3-Rn-iF1" secondAttribute="trailing" constant="107" id="fao-of-EzO"/>
                             <constraint firstItem="Rw6-Rk-34v" firstAttribute="trailing" secondItem="bgL-rB-a5s" secondAttribute="trailing" constant="25" id="fkZ-5V-gvg"/>
-                            <constraint firstItem="Rw6-Rk-34v" firstAttribute="bottom" secondItem="bgL-rB-a5s" secondAttribute="bottom" constant="25" id="oX3-uR-bVl"/>
-                            <constraint firstItem="0l3-Rn-iF1" firstAttribute="top" secondItem="Rw6-Rk-34v" secondAttribute="top" constant="479" id="owZ-iV-xD1"/>
+                            <constraint firstItem="xxt-Ud-BWJ" firstAttribute="leading" secondItem="Rw6-Rk-34v" secondAttribute="leading" constant="107" id="gy8-MP-MX2"/>
+                            <constraint firstItem="pI2-yn-esk" firstAttribute="centerX" secondItem="VfC-Wh-4Px" secondAttribute="centerX" id="lEW-Pw-ko3"/>
+                            <constraint firstItem="0l3-Rn-iF1" firstAttribute="leading" secondItem="Rw6-Rk-34v" secondAttribute="leading" constant="107" id="lRb-gc-HZ8"/>
+                            <constraint firstItem="Rw6-Rk-34v" firstAttribute="trailing" secondItem="pI2-yn-esk" secondAttribute="trailing" constant="107" id="qcQ-cB-IAb"/>
                             <constraint firstItem="bgL-rB-a5s" firstAttribute="centerX" secondItem="VfC-Wh-4Px" secondAttribute="centerX" id="vTD-dG-oWL"/>
                             <constraint firstItem="bgL-rB-a5s" firstAttribute="top" secondItem="Rw6-Rk-34v" secondAttribute="top" constant="25" id="wxx-M9-AI8"/>
+                            <constraint firstItem="0l3-Rn-iF1" firstAttribute="top" secondItem="bgL-rB-a5s" secondAttribute="bottom" constant="25" id="z7C-mI-YML"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="av2-IT-9Fp" appends="YES" id="Qw0-ea-aYO"/>
@@ -69,6 +83,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Config" id="uMH-uW-Hzg"/>
                     <connections>
+                        <outlet property="LabelTextField" destination="pI2-yn-esk" id="FGf-ww-Ggs"/>
                         <outlet property="nameTextField" destination="0l3-Rn-iF1" id="IKr-m0-nLj"/>
                     </connections>
                 </viewController>
@@ -88,9 +103,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K22-Th-nhk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.28424657850000001" green="0.56953309169999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.28424657850000001" green="0.56953309169999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
@@ -131,13 +146,13 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56a-d5-s40">
                                 <rect key="frame" x="107" y="643" width="200" height="60"/>
-                                <color key="backgroundColor" red="0.3980596662" green="0.54443895819999999" blue="0.749047935" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.39851522940478568" green="0.80927312861763467" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="bSf-jT-3q3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
                                 <state key="normal" title="OpenQuizz">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhM-xQ-um9"/>
@@ -146,13 +161,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W99-Nl-nzE">
                                 <rect key="frame" x="107" y="728" width="200" height="60"/>
-                                <color key="backgroundColor" red="0.3980596662" green="0.54443895819999999" blue="0.749047935" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.39851522940478568" green="0.80927312861763467" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="2Xk-Z3-28n"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
                                 <state key="normal" title="OpenStats">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="wAm-nE-gsZ"/>
@@ -161,7 +176,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s0U-ae-xB1"/>
-                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.2842465784923931" green="0.56953309173711142" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" notEnabled="YES"/>
                         </accessibility>
@@ -190,33 +205,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="667" translatesAutoresizingMaskIntoConstraints="NO" id="ctS-qq-qk1">
-                                <rect key="frame" x="25" y="113" width="364" height="36"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ctS-qq-qk1">
+                                <rect key="frame" x="25" y="113" width="364" height="724"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME STATS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cos-Pq-lpg">
-                                        <rect key="frame" x="0.0" y="0.0" width="364" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Nombre de parties" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cos-Pq-lpg">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="150"/>
+                                        <color key="backgroundColor" red="0.39851522940478568" green="0.80927312861763467" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="Ame-Ra-xqJ"/>
+                                            <constraint firstAttribute="height" constant="150" id="OTS-p9-shW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="30"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Top score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ0-tF-U9J">
+                                        <rect key="frame" x="0.0" y="175" width="364" height="150"/>
+                                        <color key="backgroundColor" red="0.39851522940478568" green="0.80927312861763467" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="HWq-6Z-wOx"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="lrA-f8-zz1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="30"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="I7n-xl-y47">
+                                        <rect key="frame" x="0.0" y="350" width="364" height="374"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Top 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LH3-SB-Vrp">
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="70"/>
+                                                <color key="backgroundColor" red="0.3985152294" green="0.8092731286" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="Aqe-ss-DFc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="30"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Tah-nk-WxF">
+                                                <rect key="frame" x="0.0" y="95" width="364" height="279"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPY-sN-uXt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="230" height="279"/>
+                                                        <color key="backgroundColor" red="0.3985152294" green="0.8092731286" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="Zvn-sf-UfI"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="26"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuT-2w-an9">
+                                                        <rect key="frame" x="254" y="0.0" width="110" height="279"/>
+                                                        <color key="backgroundColor" red="0.3985152294" green="0.8092731286" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" red="0.84974093260000005" green="0.34457601510000002" blue="0.45696449230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="25"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.3985152294" green="0.8092731286" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.3985152294" green="0.8092731286" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.3985152294" green="0.8092731286" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="I7n-xl-y47" firstAttribute="top" secondItem="LQ0-tF-U9J" secondAttribute="bottom" constant="25" id="i31-Sr-Lag"/>
+                                </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME STATS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ0-tF-U9J">
-                                <rect key="frame" x="25" y="157" width="364" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iDg-Jc-QYx"/>
-                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.2842465784923931" green="0.56953309173711142" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ctS-qq-qk1" firstAttribute="leading" secondItem="iDg-Jc-QYx" secondAttribute="leading" constant="25" id="9YD-8E-U5f"/>
-                            <constraint firstItem="LQ0-tF-U9J" firstAttribute="top" secondItem="ctS-qq-qk1" secondAttribute="bottom" constant="8" symbolic="YES" id="9pP-ya-Zzr"/>
                             <constraint firstItem="ctS-qq-qk1" firstAttribute="top" secondItem="iDg-Jc-QYx" secondAttribute="top" constant="25" id="FAn-aE-xzF"/>
-                            <constraint firstItem="LQ0-tF-U9J" firstAttribute="leading" secondItem="iDg-Jc-QYx" secondAttribute="leading" constant="25" id="LJf-xN-zJV"/>
+                            <constraint firstItem="iDg-Jc-QYx" firstAttribute="bottom" secondItem="ctS-qq-qk1" secondAttribute="bottom" constant="25" id="L7i-3Z-UCF"/>
                             <constraint firstItem="iDg-Jc-QYx" firstAttribute="trailing" secondItem="ctS-qq-qk1" secondAttribute="trailing" constant="25" id="ON8-6v-Ocx"/>
-                            <constraint firstItem="iDg-Jc-QYx" firstAttribute="trailing" secondItem="LQ0-tF-U9J" secondAttribute="trailing" constant="25" id="hyP-w1-D6u"/>
+                            <constraint firstItem="ctS-qq-qk1" firstAttribute="centerX" secondItem="P5Q-Hp-BKu" secondAttribute="centerX" id="X5h-pX-Sfl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Statistics" id="CXy-fw-iYV"/>
@@ -224,7 +292,9 @@
                     <connections>
                         <outlet property="LabelTextField" destination="Cos-Pq-lpg" id="h0Z-UK-Ldo"/>
                         <outlet property="LabelTextField2" destination="LQ0-tF-U9J" id="wMs-I9-c0f"/>
-                        <outlet property="labelTextField" destination="Cos-Pq-lpg" id="gTx-cc-aB9"/>
+                        <outlet property="LabelTextField3" destination="FuT-2w-an9" id="vTk-ay-mnb"/>
+                        <outlet property="LabelTextField4" destination="hPY-sN-uXt" id="Jng-3k-FJ5"/>
+                        <outlet property="Stackview" destination="I7n-xl-y47" id="hYn-tu-oG1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Pl-P4-VHB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -241,13 +311,13 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSn-Rl-djI">
                                 <rect key="frame" x="107" y="802" width="200" height="60"/>
-                                <color key="backgroundColor" red="0.3980596662" green="0.54443895819999999" blue="0.749047935" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.39851522940478568" green="0.80927312861763467" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="xkg-LL-GKs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
                                 <state key="normal" title="New Game">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="JJg-Ut-vZA"/>
@@ -271,8 +341,9 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ou se cache donc le marsupilami?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ujb-vX-L4Y">
                                         <rect key="frame" x="8" y="8" width="229" height="229"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.39851522940478568" green="0.80927312861763467" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Icon Correct" translatesAutoresizingMaskIntoConstraints="NO" id="Mtg-MF-qsJ">
@@ -298,24 +369,31 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFR-kn-09Z">
                                 <rect key="frame" x="107" y="717" width="200" height="60"/>
-                                <color key="backgroundColor" red="0.3980596662" green="0.54443895819999999" blue="0.749047935" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.39851522940478568" green="0.80927312861763467" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="NVg-Am-948"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
                                 <state key="normal" title="Config">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="c41-O9-yTd"/>
                                     <segue destination="1Lp-7s-lcM" kind="unwind" unwindAction="unwindToConfigWithSegue:" id="ALN-gQ-TyU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bonjour" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvR-2d-ZWt">
+                                <rect key="frame" x="50" y="407" width="314" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.34964320059999998" green="0.4061316848" blue="0.490208745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.2842465784923931" green="0.56953309173711142" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GuT-Tg-Drh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="0Mx-TJ-Qx9"/>
+                            <constraint firstItem="fvR-2d-ZWt" firstAttribute="top" secondItem="HPR-hu-hCS" secondAttribute="bottom" constant="50" id="1Ds-Ei-gSd"/>
                             <constraint firstItem="jSn-Rl-djI" firstAttribute="centerY" secondItem="xuS-ke-8KG" secondAttribute="centerY" id="9Yb-lb-PoK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NWM-lX-dS3" secondAttribute="trailing" constant="84" id="Bg1-qu-epR"/>
                             <constraint firstItem="HPR-hu-hCS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="FCb-wm-xB8"/>
@@ -324,11 +402,14 @@
                             <constraint firstItem="yFR-kn-09Z" firstAttribute="trailing" secondItem="jSn-Rl-djI" secondAttribute="trailing" id="Me9-nA-iD6"/>
                             <constraint firstItem="GuT-Tg-Drh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="OGG-UK-gfY"/>
                             <constraint firstItem="NWM-lX-dS3" firstAttribute="leading" secondItem="GuT-Tg-Drh" secondAttribute="trailing" constant="47" id="P80-8j-uKZ"/>
+                            <constraint firstItem="fvR-2d-ZWt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RM3-Qi-KML"/>
                             <constraint firstItem="GuT-Tg-Drh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Tox-5u-4MJ"/>
                             <constraint firstItem="HPR-hu-hCS" firstAttribute="top" secondItem="NWM-lX-dS3" secondAttribute="bottom" constant="2" id="VAc-Z6-z5b"/>
                             <constraint firstItem="jSn-Rl-djI" firstAttribute="top" secondItem="yFR-kn-09Z" secondAttribute="bottom" constant="25" id="Vcx-aT-qsX"/>
                             <constraint firstItem="NWM-lX-dS3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="WhZ-vg-6l8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fvR-2d-ZWt" secondAttribute="trailing" constant="50" id="ahs-x5-GGA"/>
                             <constraint firstItem="jSn-Rl-djI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="cpb-nH-FVk"/>
+                            <constraint firstItem="fvR-2d-ZWt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="dQ9-JV-aSw"/>
                             <constraint firstItem="yFR-kn-09Z" firstAttribute="leading" secondItem="jSn-Rl-djI" secondAttribute="leading" id="euo-bR-yCW"/>
                             <constraint firstItem="jSn-Rl-djI" firstAttribute="centerX" secondItem="NWM-lX-dS3" secondAttribute="centerX" id="huv-UF-nru"/>
                             <constraint firstItem="jSn-Rl-djI" firstAttribute="centerX" secondItem="HPR-hu-hCS" secondAttribute="centerX" id="liP-T1-cdl"/>
@@ -340,6 +421,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="uti-Wl-J4a"/>
                     <connections>
+                        <outlet property="LabelTextField" destination="fvR-2d-ZWt" id="eF2-XC-Mz7"/>
                         <outlet property="activityIndicator" destination="xuS-ke-8KG" id="wBK-g7-vPb"/>
                         <outlet property="newGameButton" destination="jSn-Rl-djI" id="Kv5-rq-SOT"/>
                         <outlet property="questionView" destination="NWM-lX-dS3" id="A9O-iE-CW5"/>

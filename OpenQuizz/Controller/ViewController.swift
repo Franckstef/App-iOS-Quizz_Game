@@ -14,15 +14,15 @@ class ViewController: UIViewController {
     @IBAction func dismiss(_ sender: Any) {
         dismiss(animated: true)
     }
+    
     var game = Game()
     var gameStat = GameStats()
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     @IBOutlet weak var questionView: QuestionView!
     @IBOutlet weak var newGameButton: UIButton!
-
+    @IBOutlet weak var LabelTextField: UILabel!
     
 
     override func viewDidLoad() {
@@ -30,15 +30,21 @@ class ViewController: UIViewController {
         
         gameStat.nbParties = UserDefaults().integer(forKey: "nbParties")
         gameStat.bestScore = UserDefaults().integer(forKey: "bestScore")
+        //Name.shared.name = UserDefaults().string(forKey: "Name")!
+        gameStat.tabScore = UserDefaults().array(forKey: "topScore") as? [Int] ?? [Int]()
+        gameStat.tabName = UserDefaults().array(forKey: "topName") as? [String] ?? [String]()
         
-        // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(self, selector: #selector(questionsLoaded), name: Game.questionsLoadedNotifName, object: nil)
         
         startNewGame()
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(dragQuestionView(_:)))
         questionView.addGestureRecognizer(panGestureRecognizer)
+
         
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        LabelTextField.text = "Bonjour " + Name.shared.name
     }
     
     @objc func questionsLoaded() {
@@ -122,7 +128,14 @@ class ViewController: UIViewController {
             
             if gameStat.bestScore < game.score {
                 UserDefaults().set(game.score, forKey: "bestScore")
+                UserDefaults().set(Name.shared.name, forKey: "Name")
             }
+            
+            gameStat.remplirTabScore(score: Int(game.score))
+            UserDefaults().set(gameStat.tabScore, forKey: "topScore")
+            
+            gameStat.remplirTabNom(name: Name.shared.name)
+            UserDefaults().set(gameStat.tabName, forKey: "topName")
             
         }
         

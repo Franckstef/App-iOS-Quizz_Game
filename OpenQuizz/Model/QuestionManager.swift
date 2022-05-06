@@ -9,7 +9,7 @@
 import UIKit
 
 class QuestionManager {
-    private let url = URL(string: "https://opentdb.com/api.php?amount=10&type=boolean")!
+    private let url = URL(string: "https://opentdb.com/api.php?amount=5&type=boolean")!
 
     static let shared = QuestionManager()
     private init() {}

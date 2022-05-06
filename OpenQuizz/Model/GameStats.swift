@@ -9,16 +9,23 @@
 import Foundation
 
 class GameStats {
-    
-    var game = Game()
+   
     
     var nbParties = 0
     var bestScore = 0
-    //var tableau: [Int] = []
+    var tabScore: [Int] = []
+    var tabName: [String] = []
     
     func addPartie () {
         nbParties = nbParties + 1
     }
+
+    func remplirTabScore (score: Int) {
+            tabScore.append(score)
+    }
     
+    func remplirTabNom(name: String) {
+            tabName.append(name)
+    }
     
 }

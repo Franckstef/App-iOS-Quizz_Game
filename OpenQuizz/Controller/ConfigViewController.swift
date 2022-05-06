@@ -10,7 +10,14 @@ import UIKit
 
 class ConfigViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        LabelTextField.text = Name.shared.name
+    }
+    
     @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var LabelTextField: UILabel!
     
     @IBAction func unwindToConfig(segue:UIStoryboardSegue) { }
     
@@ -20,7 +27,10 @@ class ConfigViewController: UIViewController {
     }
     
     @IBAction func validate(_ sender: Any) {
+        LabelTextField.text = nameTextField.text
+        Name.shared.name = nameTextField.text ?? ""
     }
+    
 }
 
 extension ConfigViewController: UITextFieldDelegate {
