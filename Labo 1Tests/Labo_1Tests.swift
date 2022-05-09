@@ -1,4 +1,3 @@
-//
 //  Labo_1Tests.swift
 //  Labo 1Tests
 //
@@ -7,28 +6,94 @@
 //
 
 import XCTest
-@testable import Labo_1 // MARK: - FIXME
+
+@testable import Labo_1
 
 class Labo_1Tests: XCTestCase {
+    var game: Game!
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    override func setUp() {
+        super.setUp()
+        game = Game()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+
+     func testGivenTwoTrueQuestions_WhenAnsweringTrue_ThenScoreIsOneAndGameOnGoing()  {
+        // Given
+
+        var questions = [Question]()
+
+        questions.append(Question(title: "Q1", isCorrect: true))
+        questions.append(Question(title: "Q2", isCorrect: true))
+
+         // When
+        game.setGameQuestions(questions)
+        game.answerCurrentQuestion(with: true)
+
+         // Then
+        XCTAssert(game.score == 1)
+        XCTAssert(game.state == .ongoing)
+
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    func testGivenOneTrueQuestion_WhenAnsweringFalse_ThenScoreIs0AndGameOver() {
+        // Given
+
+        var questions = [Question]()
+
+        questions.append(Question(title: "Q1", isCorrect: true))
+
+        // When
+
+        game.setGameQuestions(questions)
+
+        game.answerCurrentQuestion(with: false)
+
+        // Then
+        XCTAssert(game.score == 0)
+        XCTAssert(game.state == .over)
+
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testGivenOneTrueQuestion_WhenAnsweringTrue_ThenScoreIs1AndGameOver() {
+
+        // Given
+
+        var questions = [Question]()
+
+        questions.append(Question(title: "Q1", isCorrect: true))
+        game.setGameQuestions(questions)
+
+        // When
+
+        game.answerCurrentQuestion(with: false)
+
+        // Then
+        XCTAssert(game.score == 0)
+        XCTAssert(game.state == .over)
+    }
+
+    func testGivenEmptyQuestionnaire_WhenSetGameQuestions_ThenGameIsOnGoingAndCurrentQuestionMatchesExcpectedTitle() {
+        //Given
+
+        var questions = [Question]()
+        let question = Question(title: "Quelque chose", isCorrect: true)
+
+        //When
+        questions.append(question)
+
+
+        game.state = .ongoing
+        game.setGameQuestions(questions)
+
+
+        // Then
+
+
+        XCTAssertEqual( game.currentQuestion.title, question.title)
+         XCTAssert(game.state == .ongoing)
     }
 
 }
+
