@@ -12,7 +12,7 @@ class ConfigViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        LabelTextField.text = Name.shared.name
+        Name.shared.name = UserDefaults().string(forKey: "Name")!
     }
     
     @IBOutlet weak var nameTextField: UITextField!

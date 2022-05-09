@@ -41,7 +41,7 @@
                                 <rect key="frame" x="107" y="188" width="200" height="42"/>
                                 <color key="backgroundColor" red="0.39851522940478568" green="0.80927312861763467" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Valider">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -81,7 +81,9 @@
                             <outletCollection property="gestureRecognizers" destination="av2-IT-9Fp" appends="YES" id="Qw0-ea-aYO"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Config" id="uMH-uW-Hzg"/>
+                    <tabBarItem key="tabBarItem" title="Config" image="Icon Error" id="uMH-uW-Hzg">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="LabelTextField" destination="pI2-yn-esk" id="FGf-ww-Ggs"/>
                         <outlet property="nameTextField" destination="0l3-Rn-iF1" id="IKr-m0-nLj"/>
@@ -103,7 +105,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K22-Th-nhk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.28424657850000001" green="0.56953309169999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.28424657850000001" green="0.56953309169999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -121,12 +122,17 @@
         <scene sceneID="mMZ-Fl-ZQu">
             <objects>
                 <navigationController id="hRU-wf-Oe6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Welcome" id="bm7-ar-ana">
-                        <color key="badgeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <tabBarItem key="tabBarItem" title="Welcome" image="Icon Correct" id="bm7-ar-ana">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9J3-L8-wKu">
+                    <navigationBar key="navigationBar" contentMode="center" translucent="NO" id="9J3-L8-wKu">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.28424657850000001" green="0.56953309169999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.28424657850000001" green="0.56953309169999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="italicSystem" pointSize="30"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="De4-Sv-G5f" kind="relationship" relationship="rootViewController" id="J6x-6L-fHt"/>
@@ -141,11 +147,11 @@
             <objects>
                 <viewController id="De4-Sv-G5f" customClass="StartViewController" customModule="Labo_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YpS-L5-Fbr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56a-d5-s40">
-                                <rect key="frame" x="107" y="643" width="200" height="60"/>
+                                <rect key="frame" x="107" y="555" width="200" height="60"/>
                                 <color key="backgroundColor" red="0.39851522940478568" green="0.80927312861763467" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="bSf-jT-3q3"/>
@@ -160,7 +166,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W99-Nl-nzE">
-                                <rect key="frame" x="107" y="728" width="200" height="60"/>
+                                <rect key="frame" x="107" y="640" width="200" height="60"/>
                                 <color key="backgroundColor" red="0.39851522940478568" green="0.80927312861763467" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="2Xk-Z3-28n"/>
@@ -197,39 +203,70 @@
             </objects>
             <point key="canvasLocation" x="-1335" y="117"/>
         </scene>
-        <!--Statistics-->
+        <!--Statistic-->
         <scene sceneID="OFQ-nj-unh">
             <objects>
                 <viewController id="A8m-BB-rPM" customClass="GameStatsViewController" customModule="Labo_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P5Q-Hp-BKu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ctS-qq-qk1">
-                                <rect key="frame" x="25" y="113" width="364" height="724"/>
+                                <rect key="frame" x="25" y="25" width="364" height="724"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Nombre de parties" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cos-Pq-lpg">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tTc-ZD-Vyw">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="150"/>
-                                        <color key="backgroundColor" red="0.39851522940478568" green="0.80927312861763467" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Nombre de parties" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cos-Pq-lpg">
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="100"/>
+                                                <color key="backgroundColor" red="0.39851522940478568" green="0.80927312861763467" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="Fc0-GH-Hdh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="30"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTn-5m-11w">
+                                                <rect key="frame" x="0.0" y="100" width="364" height="50"/>
+                                                <color key="backgroundColor" red="0.3985152294" green="0.8092731286" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="CC1-mX-Im8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="26"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="Ame-Ra-xqJ"/>
-                                            <constraint firstAttribute="height" constant="150" id="OTS-p9-shW"/>
+                                            <constraint firstAttribute="height" constant="150" id="1OC-JH-hxY"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="30"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Top score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ0-tF-U9J">
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="awo-NQ-Onn">
                                         <rect key="frame" x="0.0" y="175" width="364" height="150"/>
-                                        <color key="backgroundColor" red="0.39851522940478568" green="0.80927312861763467" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="HWq-6Z-wOx"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="lrA-f8-zz1"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="30"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Top score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ0-tF-U9J">
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="100"/>
+                                                <color key="backgroundColor" red="0.39851522940478568" green="0.80927312861763467" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="M3M-xg-pZ3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="30"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RC2-v6-hPO">
+                                                <rect key="frame" x="0.0" y="100" width="364" height="50"/>
+                                                <color key="backgroundColor" red="0.3985152294" green="0.8092731286" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="nV2-Eg-9w4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="26"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="I7n-xl-y47">
                                         <rect key="frame" x="0.0" y="350" width="364" height="374"/>
                                         <subviews>
@@ -246,21 +283,21 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Tah-nk-WxF">
                                                 <rect key="frame" x="0.0" y="95" width="364" height="279"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPY-sN-uXt">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPY-sN-uXt">
                                                         <rect key="frame" x="0.0" y="0.0" width="230" height="279"/>
                                                         <color key="backgroundColor" red="0.3985152294" green="0.8092731286" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="Zvn-sf-UfI"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="26"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuT-2w-an9">
                                                         <rect key="frame" x="254" y="0.0" width="110" height="279"/>
                                                         <color key="backgroundColor" red="0.3985152294" green="0.8092731286" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="tintColor" red="0.84974093260000005" green="0.34457601510000002" blue="0.45696449230000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="25"/>
+                                                        <color key="tintColor" red="0.46381743149999999" green="0.84974093260000005" blue="0.76138845340000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="26"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -272,9 +309,6 @@
                                         <color key="tintColor" red="0.3985152294" green="0.8092731286" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="I7n-xl-y47" firstAttribute="top" secondItem="LQ0-tF-U9J" secondAttribute="bottom" constant="25" id="i31-Sr-Lag"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iDg-Jc-QYx"/>
@@ -287,14 +321,16 @@
                             <constraint firstItem="ctS-qq-qk1" firstAttribute="centerX" secondItem="P5Q-Hp-BKu" secondAttribute="centerX" id="X5h-pX-Sfl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Statistics" id="CXy-fw-iYV"/>
+                    <navigationItem key="navigationItem" title="Statistic" id="CXy-fw-iYV"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="LabelTextField" destination="Cos-Pq-lpg" id="h0Z-UK-Ldo"/>
-                        <outlet property="LabelTextField2" destination="LQ0-tF-U9J" id="wMs-I9-c0f"/>
-                        <outlet property="LabelTextField3" destination="FuT-2w-an9" id="vTk-ay-mnb"/>
-                        <outlet property="LabelTextField4" destination="hPY-sN-uXt" id="Jng-3k-FJ5"/>
-                        <outlet property="Stackview" destination="I7n-xl-y47" id="hYn-tu-oG1"/>
+                        <outlet property="Stackview1" destination="tTc-ZD-Vyw" id="c4w-V6-rmO"/>
+                        <outlet property="Stackview2" destination="awo-NQ-Onn" id="xGG-Pw-S1D"/>
+                        <outlet property="Stackview3" destination="I7n-xl-y47" id="PWV-Uu-4MF"/>
+                        <outlet property="nbParties" destination="PTn-5m-11w" id="eAy-Q4-dFf"/>
+                        <outlet property="topCinqNom" destination="hPY-sN-uXt" id="xC3-Rr-Bai"/>
+                        <outlet property="topCinqScore" destination="FuT-2w-an9" id="IKx-sD-I9V"/>
+                        <outlet property="topScore2" destination="RC2-v6-hPO" id="NMD-rR-bac"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Pl-P4-VHB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -436,5 +472,6 @@
     </scenes>
     <resources>
         <image name="Icon Correct" width="36" height="35"/>
+        <image name="Icon Error" width="36" height="35"/>
     </resources>
 </document>

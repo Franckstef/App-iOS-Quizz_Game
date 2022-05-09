@@ -30,7 +30,6 @@ class ViewController: UIViewController {
         
         gameStat.nbParties = UserDefaults().integer(forKey: "nbParties")
         gameStat.bestScore = UserDefaults().integer(forKey: "bestScore")
-        //Name.shared.name = UserDefaults().string(forKey: "Name")!
         gameStat.tabScore = UserDefaults().array(forKey: "topScore") as? [Int] ?? [Int]()
         gameStat.tabName = UserDefaults().array(forKey: "topName") as? [String] ?? [String]()
         

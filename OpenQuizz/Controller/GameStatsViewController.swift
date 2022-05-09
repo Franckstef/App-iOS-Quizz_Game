@@ -12,41 +12,50 @@ class GameStatsViewController: UIViewController {
     
     let partie = UserDefaults().string(forKey: "nbParties")
     let bestScore = UserDefaults().string(forKey: "bestScore")
-    let topScore = UserDefaults().array(forKey: "topScore") as? [Int] ?? [Int]()
+    var topScore = UserDefaults().array(forKey: "topScore") as? [Int] ?? [Int]()
     let topName = UserDefaults().array(forKey: "topName") as? [String] ?? [String]()
     let name = UserDefaults().string(forKey: "Name")
     
-    @IBOutlet weak var LabelTextField: UILabel!
     
-    @IBOutlet weak var LabelTextField2: UILabel!
+    @IBOutlet weak var nbParties: UILabel!
     
-    @IBOutlet weak var LabelTextField3: UILabel!
+    @IBOutlet weak var topScore2: UILabel!
     
-    @IBOutlet weak var LabelTextField4: UILabel!
+    @IBOutlet weak var topCinqNom: UILabel!
     
-    @IBOutlet weak var Stackview: UIStackView!
+    @IBOutlet weak var topCinqScore: UILabel!
+    
+    @IBOutlet weak var Stackview1: UIStackView!
+    
+    @IBOutlet weak var Stackview2: UIStackView!
+    
+    @IBOutlet weak var Stackview3: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let combined = zip(topScore, topName).sorted(by: {$0.0 > $1.0})
+        let sorted1 = combined.map {$0.0}
+        let sorted2 = combined.map {$0.1}
         
-        LabelTextField.layer.cornerRadius = 20
-        LabelTextField.clipsToBounds = true
-        LabelTextField.text = "Nombre de partie: \n\n" + partie!
+        Stackview1.layer.cornerRadius = 20
+        Stackview1.clipsToBounds = true
+        nbParties.text = partie!
         
-        LabelTextField2.layer.cornerRadius = 20
-        LabelTextField2.clipsToBounds = true
-        LabelTextField2.text = "Meilleur score: \n\n" + String(name!) + " " + bestScore! + "/10"
+        Stackview2.layer.cornerRadius = 20
+        Stackview2.clipsToBounds = true
+        topScore2.text = String(name!) + " " + bestScore! + "/10"
         
-        Stackview.layer.cornerRadius = 20
-        Stackview.clipsToBounds = true
+        Stackview3.layer.cornerRadius = 20
+        Stackview3.clipsToBounds = true
         
-            for score in topName {
-                LabelTextField4.text! +=  String(score) + "\n"
-                
+        
+        
+            for score in sorted1 {
+                topCinqScore.text! +=   String(score) + "/10\n"
             }
         
-            for score in topScore {
-                LabelTextField3.text! +=  String(score) + "/10\n"
+            for score in sorted2 {
+                topCinqNom.text! +=  String(score) + "\n"
             }
         
     }
