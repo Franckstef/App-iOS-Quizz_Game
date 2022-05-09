@@ -24,9 +24,8 @@
 		81898579281ECE8600678EBA /* GameStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81898578281ECE8600678EBA /* GameStatsViewController.swift */; };
 		8189857D281EE69B00678EBA /* GameConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8189857C281EE69B00678EBA /* GameConfig.swift */; };
 		81898581281EEC4700678EBA /* GameStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81898580281EEC4700678EBA /* GameStats.swift */; };
-		AA7478952820C8B100B44CD5 /* Labo_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7478942820C8B100B44CD5 /* Labo_1Tests.swift */; };
+		AA7478952820C8B100B44CD5 /* Labo_1Tests.txt in Sources */ = {isa = PBXBuildFile; fileRef = AA7478942820C8B100B44CD5 /* Labo_1Tests.txt */; };
 		AAAD9F61282073B2009A196E /* GameTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAD9F60282073B2009A196E /* GameTestCase.swift */; };
-		AAAD9F6328207648009A196E /* QuestionTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAD9F6228207648009A196E /* QuestionTestCase.swift */; };
 		AAAD9F652820766E009A196E /* GameConfigTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAD9F642820766E009A196E /* GameConfigTestCase.swift */; };
 		AAAD9F672820768D009A196E /* GameStatsTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAD9F662820768D009A196E /* GameStatsTestCase.swift */; };
 		AAAD9F69282076D8009A196E /* QuestionManagerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAD9F68282076D8009A196E /* QuestionManagerTestCase.swift */; };
@@ -64,9 +63,8 @@
 		81898578281ECE8600678EBA /* GameStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatsViewController.swift; sourceTree = "<group>"; };
 		8189857C281EE69B00678EBA /* GameConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConfig.swift; sourceTree = "<group>"; };
 		81898580281EEC4700678EBA /* GameStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStats.swift; sourceTree = "<group>"; };
-		AA7478942820C8B100B44CD5 /* Labo_1Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Labo_1Tests.swift; sourceTree = "<group>"; };
+		AA7478942820C8B100B44CD5 /* Labo_1Tests.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Labo_1Tests.txt; sourceTree = "<group>"; };
 		AAAD9F60282073B2009A196E /* GameTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTestCase.swift; sourceTree = "<group>"; };
-		AAAD9F6228207648009A196E /* QuestionTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTestCase.swift; sourceTree = "<group>"; };
 		AAAD9F642820766E009A196E /* GameConfigTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConfigTestCase.swift; sourceTree = "<group>"; };
 		AAAD9F662820768D009A196E /* GameStatsTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStatsTestCase.swift; sourceTree = "<group>"; };
 		AAAD9F68282076D8009A196E /* QuestionManagerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManagerTestCase.swift; sourceTree = "<group>"; };
@@ -95,8 +93,7 @@
 			children = (
 				6A4D3092268D00B80082E101 /* Info.plist */,
 				AAAD9F60282073B2009A196E /* GameTestCase.swift */,
-				AA7478942820C8B100B44CD5 /* Labo_1Tests.swift */,
-				AAAD9F6228207648009A196E /* QuestionTestCase.swift */,
+				AA7478942820C8B100B44CD5 /* Labo_1Tests.txt */,
 				AAAD9F642820766E009A196E /* GameConfigTestCase.swift */,
 				AAAD9F662820768D009A196E /* GameStatsTestCase.swift */,
 				AAAD9F68282076D8009A196E /* QuestionManagerTestCase.swift */,
@@ -284,9 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAAD9F61282073B2009A196E /* GameTestCase.swift in Sources */,
-				AA7478952820C8B100B44CD5 /* Labo_1Tests.swift in Sources */,
+				AA7478952820C8B100B44CD5 /* Labo_1Tests.txt in Sources */,
 				AAAD9F652820766E009A196E /* GameConfigTestCase.swift in Sources */,
-				AAAD9F6328207648009A196E /* QuestionTestCase.swift in Sources */,
 				AAAD9F69282076D8009A196E /* QuestionManagerTestCase.swift in Sources */,
 				AAAD9F672820768D009A196E /* GameStatsTestCase.swift in Sources */,
 			);
