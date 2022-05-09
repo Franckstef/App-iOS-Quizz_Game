@@ -15,17 +15,24 @@ class GameStats {
     var bestScore = 0
     var tabScore: [Int] = []
     var tabName: [String] = []
+    var bouh = [Int:String]()
+    var combined: [Any] = []
     
     func addPartie () {
         nbParties = nbParties + 1
     }
 
     func remplirTabScore (score: Int) {
-            tabScore.append(score)
+        tabScore.append(score)
+      
     }
     
     func remplirTabNom(name: String) {
-            tabName.append(name)
+        tabName.append(name)
     }
     
+    func bla() {
+        zip(tabScore, tabName).sorted(by: {$0.0 < $1.0})
+    }
+
 }
