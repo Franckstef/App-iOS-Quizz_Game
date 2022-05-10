@@ -1,3 +1,4 @@
+
 //  Labo_1Tests.swift
 //  Labo 1Tests
 //
@@ -17,12 +18,9 @@ class Labo_1Tests: XCTestCase {
         game = Game()
     }
 
-
      func testGivenTwoTrueQuestions_WhenAnsweringTrue_ThenScoreIsOneAndGameOnGoing()  {
         // Given
-
         var questions = [Question]()
-
         questions.append(Question(title: "Q1", isCorrect: true))
         questions.append(Question(title: "Q2", isCorrect: true))
 
@@ -36,18 +34,13 @@ class Labo_1Tests: XCTestCase {
 
     }
 
-
     func testGivenOneTrueQuestion_WhenAnsweringFalse_ThenScoreIs0AndGameOver() {
         // Given
-
         var questions = [Question]()
-
         questions.append(Question(title: "Q1", isCorrect: true))
 
         // When
-
         game.setGameQuestions(questions)
-
         game.answerCurrentQuestion(with: false)
 
         // Then
@@ -59,14 +52,11 @@ class Labo_1Tests: XCTestCase {
     func testGivenOneTrueQuestion_WhenAnsweringTrue_ThenScoreIs1AndGameOver() {
 
         // Given
-
         var questions = [Question]()
-
         questions.append(Question(title: "Q1", isCorrect: true))
         game.setGameQuestions(questions)
 
         // When
-
         game.answerCurrentQuestion(with: false)
 
         // Then
@@ -76,24 +66,16 @@ class Labo_1Tests: XCTestCase {
 
     func testGivenEmptyQuestionnaire_WhenSetGameQuestions_ThenGameIsOnGoingAndCurrentQuestionMatchesExcpectedTitle() {
         //Given
-
         var questions = [Question]()
-        let question = Question(title: "Quelque chose", isCorrect: true)
-
+        let question = Question(title: "Test pour vérifier la question", isCorrect: true)
         //When
         questions.append(question)
-
-
         game.state = .ongoing
         game.setGameQuestions(questions)
 
-
         // Then
-
-
         XCTAssertEqual( game.currentQuestion.title, question.title)
          XCTAssert(game.state == .ongoing)
     }
 
 }
-

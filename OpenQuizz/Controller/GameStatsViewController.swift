@@ -34,8 +34,8 @@ class GameStatsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let combined = zip(topScore, topName).sorted(by: {$0.0 > $1.0})
-        let sorted1 = combined.map {$0.0}
-        let sorted2 = combined.map {$0.1}
+        let scoreSorted = combined.map {$0.0}
+        let nameSorted = combined.map {$0.1}
         
         Stackview1.layer.cornerRadius = 20
         Stackview1.clipsToBounds = true
@@ -48,13 +48,11 @@ class GameStatsViewController: UIViewController {
         Stackview3.layer.cornerRadius = 20
         Stackview3.clipsToBounds = true
         
-        
-        
-            for score in sorted1 {
+            for score in scoreSorted {
                 topCinqScore.text! +=   String(score) + "/10\n"
             }
         
-            for score in sorted2 {
+            for score in nameSorted {
                 topCinqNom.text! +=  String(score) + "\n"
             }
         

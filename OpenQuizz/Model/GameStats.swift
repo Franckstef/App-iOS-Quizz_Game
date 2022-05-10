@@ -31,8 +31,5 @@ class GameStats {
         tabName.append(name)
     }
     
-    func bla() {
-        zip(tabScore, tabName).sorted(by: {$0.0 < $1.0})
-    }
 
 }

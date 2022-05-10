@@ -43,7 +43,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        LabelTextField.text = "Bonjour " + Name.shared.name
+        LabelTextField.text = "Bonjour \n" + Name.shared.name
     }
     
     @objc func questionsLoaded() {

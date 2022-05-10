@@ -12,7 +12,7 @@ class Name {
     
     static let shared = Name()
 
-    var name: String = "User Default"
+    var name: String = "Default player"
     
     private init(){}
 
